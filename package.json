@@ -1,0 +1,27 @@
+{
+  "name": "changi",
+  "version": "1.0.0",
+  "description": "A bot that .... 1. Translation 2. Analyze Landmarks 3. Things to do around landmark 4. Places to eat nearby 5. FAQ's",
+  "main": "mainApp.js",
+  "dependencies": {
+    "all": "0.0.0",
+    "bluebird": "^3.5.0",
+    "botbuilder": "^3.8.4",
+    "dotenv-extended": "^1.0.4",
+    "html-entities": "^1.2.1",
+    "mstranslator": "^3.0.0",
+    "needle": "^1.6.0",
+    "request": "^2.81.0",
+    "restify": "^4.3.1",
+    "url": "^0.11.0",
+    "urlencode": "^1.1.0",
+    "valid-url": "^1.0.9",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
