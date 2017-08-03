@@ -29,7 +29,7 @@ var stdResponse = {
     notReady: "Okay! Talk to me when you are ready :)",
     configureLang: "Please configure your language first by saying 'Configure Language'",
     headBack: "Exiting selected functionality",
-    imageUpload: "Can you share a picture?\n\n Try sending an image URL or upload an image\\You can also 'exit' if you changed your mind!"
+    imageUpload: "Can you share a picture?\n\n Try sending an image URL or upload an image\n\nYou can also 'exit' if you changed your mind!"
 };
 
 exports.stdResponse = stdResponse;
