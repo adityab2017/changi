@@ -76,6 +76,7 @@ intentDialog.matches(/\b(hello|hi|hey|how are you)\b/i, '/firstLoad')
     .matches('questions', '/qna')
     .onDefault('/defaultResp');
 
+bot.use(builder.Middleware.dialogVersion({ version: 1.0, resetCommand: /^reset/i })); 
 
 bot.dialog('/firstLoad', [
     function (session) {
@@ -89,24 +90,6 @@ bot.dialog('/firstLoad', [
         session.replaceDialog('/cards');
     }    
 ]);
-
-
-// Trigger secondary dialogs when 'settings' or 'support' is called
-//bot.use({
-//    botbuilder: function (session, next) {
-//        var text = session.message.text;
-//        //if (settingsRegex.test(text)) {
-//        //    // interrupt and trigger 'settings' dialog 
-//        //    return session.beginDialog('settings:/');
-//        //} else if (supportRegex.test(text)) {
-//        //    // interrupt and trigger 'help' dialog
-//        //    return session.beginDialog('help:/');
-//        //}
-//        session.send(text);
-//        // continue normal flow
-//        next();
-//    }
-//});
 
 bot.dialog('/travelcard', require('./travel'));
 bot.dialog('/alsochecktravel', require('./alsoCheckTravel'));

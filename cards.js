@@ -14,7 +14,8 @@ module.exports = [
             .subtitle('Consider getting the following cards')
             .images([
                 new builder.CardImage(session)
-                    .url('http://organisationdevelopment.org/wp-content/uploads/2012/05/0280393f5a5f70b0f4dd5997659650de.jpeg')
+                //    .url('http://organisationdevelopment.org/wp-content/uploads/2012/05/0280393f5a5f70b0f4dd5997659650de.jpeg')
+                    .url('http://www.network-computing.co.uk/images/essentials_cogs.png')
                     .alt('Essentials')
             ])
             .buttons([
