@@ -108,5 +108,5 @@ bot.dialog('/resetLang', function (session, args) {
 });
 
 bot.dialog('/thanks', function (session, args) {
-    session.endDialog('Happy to help.\n\n Let me know if you need anything');
+    session.endDialog('Happy to help.\n\nLet me know if you need anything');
 });
