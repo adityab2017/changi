@@ -6,11 +6,10 @@ var request = require('request');
 
 var token = "";
 var tokeninterval;
-//var TRANSLATIONKEY = process.env.TRANSLATION_KEY; // Replace this with your translation key as a string
-var TRANSLATIONKEY = '242f8c1667d94c0f889dd0638078002f'; // Replace this with your translation key as a string
+//var TRANSLATIONKEY = process.env.TRANSLATION_KEY; // 
+var TRANSLATIONKEY = '242f8c1667d94c0f889dd0638078002f'; // 
 
 
-// Put this in a separate web job if deploying to production, otherwise fine for development
 // Why I used setTimeout and not setInterval: http://www.thecodeship.com/web-development/alternative-to-javascript-evil-setinterval/
 function getToken() {
     
