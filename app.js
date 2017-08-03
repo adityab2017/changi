@@ -76,8 +76,6 @@ intentDialog.matches(/\b(hello|hi|hey|how are you)\b/i, '/firstLoad')
     .matches('questions', '/qna')
     .onDefault('/defaultResp');
 
-//bot.use(builder.Middleware.dialogVersion({ version: 1.0, resetCommand: /^reset/i })); 
-
 bot.dialog('/firstLoad', [
     function (session) {
         //check if language is set
