@@ -83,22 +83,10 @@ bot.dialog('/firstLoad', [
         session.beginDialog('/language');
     },
     function (session, results) {
-        if (session.userData['Lang'] == 'en') {
-            session.beginDialog('/country');
-        }
-        else {
-         //   session.send('Lang not english');
-            session.replaceDialog('/');
-        }
+        session.beginDialog('/country');
     },
     function (session, results) {
-        if (session.userData['Lang'] == 'en') {
-            session.replaceDialog('/cards');
-        }
-        else {
-        //    session.send('Lang not english - loop2');
-            session.replaceDialog('/');
-        }
+        session.replaceDialog('/cards');
     }    
 ]);
 
@@ -126,11 +114,5 @@ bot.dialog('/thanks', function (session, args) {
 
 bot.dialog('/langToEng', function (session) {
     session.userData['Lang'] = 'en';
-    session.send(standardReplies.langEng);
-    session.replaceDialog('/firstLoad');
-});
-
-bot.dialog('defaultResp', function (session) {
-    session.send('Sorry, I didn\'t catch that.\n\n Could you please try again?');
-    session.replaceDialog('/');
+    session.endDialog(standardReplies.langReset);
 });

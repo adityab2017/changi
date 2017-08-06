@@ -17,8 +17,9 @@ exports.choiceLabels = dialogLabels;
 //Standard Responses
 var stdResponse = {
     simnCard: "The following services can assist you during your stay:\n\n",
-    firstInit: "This is your first time using me, which language do you prefer me to reply in?",
+    firstInit: "This is your first time using me. \n\nWhich language would you like to continue in?",
     langChanged: "Okay! Your language preference has been set. ",
+    langEng: "Okay! Your language has been set to English. ",
     askQn: "To begin, just ask me a question like",
     queryExample: "\n\n- Scan this landmark\n\n- I have questions\n\n- Places to visit\n\n- Things to do",
     techLimitation: "Due to technical limitations, please send me your requests in English.",

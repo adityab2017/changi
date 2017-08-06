@@ -13,7 +13,7 @@ module.exports = [
     function (session) {
         var lang = session.userData['Lang'];
         if (!lang) {
-            builder.Prompts.choice(session, standardReplies.firstInit, "English|Chinese|Japanese|Tamil|Hindi|Cancel");
+            builder.Prompts.choice(session, standardReplies.firstInit, "Chinese|Japanese|Tamil|Hindi|Continue in English|Cancel");
         }
         else {
             session.endDialog();
@@ -24,10 +24,7 @@ module.exports = [
         if (results.response && results.response.entity !== 'Cancel') {
             var fullLang = "English";
             //Add more languages for your liking, add prompt on top also
-            if (results.response.entity.toUpperCase() == "ENGLISH") {
-                session.userData['Lang'] = 'en';
-                fullLang = "English";
-            } else if (results.response.entity.toUpperCase() == "CHINESE") {
+            if (results.response.entity.toUpperCase() == "CHINESE") {
                 session.userData['Lang'] = 'zh-chs';
                 fullLang = "中文";
             } else if (results.response.entity.toUpperCase() == "JAPANESE") {
@@ -39,7 +36,10 @@ module.exports = [
             } else if (results.response.entity.toUpperCase() == "HINDI") {
                 session.userData['Lang'] = 'hi';
                 fullLang = "हिन्दी";
-            }
+            } else {
+                session.userData['Lang'] = 'en';
+                fullLang = "English";
+            } 
 
             var paramsTranslateTo = {
                 text: standardReplies.langChanged,
