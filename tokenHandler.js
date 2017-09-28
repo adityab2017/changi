@@ -6,8 +6,8 @@ var request = require('request');
 
 var token = "";
 var tokeninterval;
-//var TRANSLATIONKEY = process.env.TRANSLATION_KEY; // 
-var TRANSLATIONKEY = '242f8c1667d94c0f889dd0638078002f'; // 
+var TRANSLATIONKEY = process.env.MICROSOFT_TRANSLATOR_KEY; 
+//var TRANSLATIONKEY = '242f8c1667d94c0f889dd0638078002f'; // 
 
 
 // Why I used setTimeout and not setInterval: http://www.thecodeship.com/web-development/alternative-to-javascript-evil-setinterval/

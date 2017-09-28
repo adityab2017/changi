@@ -1,7 +1,7 @@
 
 var request = require('request').defaults({ encoding: null });
 
-var VISION_URL = 'https://southeastasia.api.cognitive.microsoft.com/vision/v1.0/analyze?details=Landmarks';
+var VISION_URL = 'https://southcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze?details=Landmarks';
 /** 
  *  Gets the caption of the image from an image stream
  * @param {stream} stream The stream to an image.
